@@ -1,0 +1,348 @@
+*{
+    background-color: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #e3e9f7;
+}
+
+.navbar{
+    background-color: #e3e9f7;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 20px 25px;
+}
+
+.backban {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo img{
+    position: relative;
+    top: 10px;
+    padding: 0 10px 0 0;
+    width: 40px;
+    height: auto;
+}
+
+.icon img{
+    padding: 0 10px 3px 10px;
+    margin: 0 0 0 5px;
+    height: 25px;
+    width: auto;
+}
+
+.topnav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    Left: 0;
+    z-index: 2;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.topnav ul li{
+    list-style: none;
+}
+
+/* .topnav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+} */
+
+.navitem:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.topnav ul li a:hover{
+    color: black;
+}
+
+.topnav ul li a:hover::before{
+    width: 95%;
+}
+
+.navitem {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+}
+
+/* <-------------------------------------------------------------------> */
+/* Bottom */
+
+.bottomnav ul{
+    margin-bottom: 0;
+    padding: 0;
+    bottom: 0;
+    width: 260px;
+    position: fixed;
+    Left: 0;
+    z-index: 2;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.bottomnav ul li{
+    list-style: none;
+}
+
+/* .bottomnav ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    position: relative;
+    padding: 10px 0 10px 10px;
+    align-items: center;
+} */
+
+
+.bottomnav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.bottomnav ul li a:hover{
+    color: black;
+}
+
+.bottomnav ul li a:hover::before{
+    width: 95%;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* Main */
+main{
+    margin-left: 260px;
+    min-height: 100vh;
+    /* background-color: antiquewhite; */
+}
+
+.wrapper{
+    /* background-color: rgb(137, 137, 255); */
+    margin: 70px 20px 0 20px;
+}
+
+.selection{
+    width: 95%;
+    /* background-color: aquamarine; */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.selection .genre{
+    /* background-color: bisque; */
+    border: #676767, 2px, solid;
+    border-color: #cbcbcb;
+    min-width: 270px;
+    /* align-items: center;
+    justify-content: space-between;
+    position: relative; */
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #e2e4ea;
+}
+
+.selection .genre:hover{
+    border-color: #aeaeae;    
+}
+
+.selection .genre a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+}
+
+.section h1{
+    margin: 0 0 20px 30px;
+    font-size: 40px;
+}
+
+/* Suggested Games ------------------------------------------------------------------------------ */
+
+.suggest{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.suggest h2{
+    font-size: 30px;
+}
+
+.suggest .game{
+    /* background-color: rgb(206, 206, 255); */
+    margin-right: 55px;
+    border-top-style: solid;
+    border-color: rgb(211, 211, 211);
+    margin-bottom: 5px;
+}
+
+.suggest .game a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 20px;
+}
+
+.suggest .game a h3{
+    margin-left: 20px;
+}
+
+.suggest .game a img{
+    height: 100px;
+    width: auto;
+    position: relative;
+}
+
+.suggest .game a ul{
+    margin-left: 400px;
+    position: absolute;
+}
+
+.suggest .game a ul li{
+    list-style: none;
+    display: inline-block;
+    background-color: #e3e9f7;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+.suggest .game a .pricebox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 40px;
+    /* gap: 2.5rem; */
+    grid-template-columns: repeat(auto-fit);
+    /* background-color: aqua; */
+    min-width: 150px;
+    justify-content: space-between;
+}
+
+
+.suggest .game a .disc{
+    background-color: #e3e9f7;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  position: fixed;
+  margin-left: 150px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e3e9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#preloader video {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer */
+
+.footer{
+    margin-left: 260px;
+    background-color: #e3e9f7;
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    border-top-style: solid;
+    border-color: lightgray;
+}
+
+.footer .row{
+    width:100%;
+    color:gray;
+    font-size:0.8em;
+}
+
+.footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+}
+
+.footer .row a:hover{
+    color: black;
+}
+
+.footer .row img{
+    height: 25px;
+    width: auto;
+    gap: 10px;
+}

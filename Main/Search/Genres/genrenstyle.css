@@ -1,0 +1,323 @@
+*{
+    background-color: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #e3e9f7;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Top Sidebar */
+
+.navbar{
+    background-color: #e3e9f7;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 20px 25px;
+}
+
+.backban {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo img{
+    position: relative;
+    top: 10px;
+    padding: 0 10px 0 0;
+    width: 40px;
+    height: auto;
+}
+
+.icon img{
+    padding: 0 10px 3px 10px;
+    margin: 0 0 0 5px;
+    height: 25px;
+    width: auto;
+}
+
+.topnav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    Left: 0;
+    z-index: 5;
+    height: 100%;
+    width: 260px;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.topnav ul li{
+    list-style: none;
+}
+
+.navitem:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.topnav ul li a:hover{
+    color: black;
+}
+
+.topnav ul li a:hover::before{
+    width: 95%;
+}
+
+.navitem {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+}
+
+/* <-------------------------------------------------------------------> */
+/* Bottom Sidebar */
+
+.bottomnav ul{
+    margin-bottom: 0;
+    padding: 0;
+    bottom: 0;
+    width: 260px;
+    position: fixed;
+    Left: 0;
+    z-index: 5;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.bottomnav ul li{
+    list-style: none;
+}
+
+.bottomnav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.bottomnav ul li a:hover{
+    color: black;
+}
+
+.bottomnav ul li a:hover::before{
+    width: 95%;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* Main Body */
+main{
+    padding-top: 30px;
+}
+
+.wrapper{
+    margin-left: 260px;
+    margin-top: -70px;
+    min-height: 100vh;
+    /* background-color: yellow; */
+}
+
+.topsell{
+    min-height: 55vh;
+    padding-left: 60px;
+    padding-top: 60px;
+}
+
+/* Top Section------------------------------------------------------------------- */
+
+.topsell .topsection{
+    margin-right: 55px;
+}
+
+.topsell .topsection h2{
+    font-size: 30px;
+}
+
+.topsell .topsection ul{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.topsell .topsection ul li{
+    list-style: none;
+    font-weight: 550;
+    padding-right: 40px;
+}
+
+.topsell .topsection ul .T{
+    padding-left: 20px;
+}
+
+.topsell .topsection ul .G{
+    padding-Left: 450px;
+    padding-right: 340px;
+}
+
+.topsell .topsection ul .DP {
+    margin-left: auto;
+    margin-right: 40px;
+    display: flex;
+    gap: 45px;
+}
+
+/* Top Seller Games ------------------------------------------------------------------------------ */
+
+.topsell .game{
+    /* background-color: rgb(206, 206, 255); */
+    margin-right: 55px;
+    border-top-style: solid;
+    border-color: rgb(211, 211, 211);
+    margin-bottom: 5px;
+}
+
+.topsell .game a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 20px;
+}
+
+.topsell .game a h3{
+    margin-left: 20px;
+}
+
+.topsell .game a img{
+    height: 100px;
+    width: auto;
+    position: relative;
+}
+
+.topsell .game a ul{
+    margin-left: 400px;
+    position: absolute;
+}
+
+.topsell .game a ul li{
+    list-style: none;
+    display: inline-block;
+    background-color: #e3e9f7;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+.topsell .game a .pricebox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: 40px;
+    /* gap: 2.5rem; */
+    grid-template-columns: repeat(auto-fit);
+    /* background-color: aqua; */
+    min-width: 150px;
+    justify-content: space-between;
+}
+
+
+.topsell .game a .disc{
+    background-color: #e3e9f7;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  position: fixed;
+  margin-left: 150px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e3e9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+#preloader video {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer */
+
+.footer{
+    margin-left: 260px;
+    background-color: #e3e9f7;
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    border-top-style: solid;
+    border-color: lightgray;
+}
+
+.footer .row{
+    width:100%;
+    color:gray;
+    font-size:0.8em;
+}
+
+.footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+}
+
+.footer .row a:hover{
+    color: black;
+}
+
+.footer .row img{
+    height: 25px;
+    width: auto;
+    gap: 10px;
+}
+
+
+

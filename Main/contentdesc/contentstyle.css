@@ -1,0 +1,413 @@
+*{
+    background-color: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #e3e9f7;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Top Sidebar */
+
+.navbar{
+    background-color: #e3e9f7;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 20px 25px;
+}
+
+.backban {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo img{
+    position: relative;
+    top: 10px;
+    padding: 0 10px 0 0;
+    width: 40px;
+    height: auto;
+}
+
+.icon img{
+    padding: 0 10px 3px 10px;
+    margin: 0 0 0 5px;
+    height: 25px;
+    width: auto;
+}
+
+.topnav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    Left: 0;
+    z-index: 2;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.topnav ul li{
+    list-style: none;
+}
+
+.navitem:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.topnav ul li a:hover{
+    color: black;
+}
+
+.topnav ul li a:hover::before{
+    width: 95%;
+}
+
+.navitem {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+}
+
+/* <-------------------------------------------------------------------> */
+/* Bottom Sidebar */
+
+.bottomnav ul{
+    margin-bottom: 0;
+    padding: 0;
+    bottom: 0;
+    width: 260px;
+    position: fixed;
+    Left: 0;
+    z-index: 2;
+    border-right-style: solid;
+    border-color: lightgray;
+}
+
+.bottomnav ul li{
+    list-style: none;
+}
+
+
+.bottomnav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: lightgray;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+
+.bottomnav ul li a:hover{
+    color: black;
+}
+
+.bottomnav ul li a:hover::before{
+    width: 95%;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* Main Body */
+/* margin: top right bottom left */
+
+.wrapper{
+    margin: 0 0 0 260px;
+    min-height: 100vh;
+}
+
+.toppart{
+    display: flex;
+    margin: 0;
+}
+
+.leftside{
+    width: 100%;
+    margin-left: 20px;
+}
+
+.page h3{
+    margin: 0 0 0 50px;
+    padding: 50px 0 0 0;
+    font-size: 35px;
+}
+
+.review{
+    background-color: rgb(222, 222, 222);
+    margin: 0 0 0 50px;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+.review .gamedesc{
+    padding: 10px 10px 10px 10px;
+}
+
+.review .glancereview{
+    padding: 10px 10px 10px 10px;
+}
+
+/* User Review ------------------------------------------------------------------------- */
+
+.userreview{
+    padding: 0 0 10px 0;
+}
+
+.userreview .recent{
+    line-height: 16px;
+    display: flex;
+    text-transform: uppercase;
+}
+
+.userreview .overall{
+    display: flex;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+/* Date ----------------------------------------------------------------------------------- */
+
+.release_date{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+/* Devs --------------------------------------------------------------------------------------- */
+
+.dev_row{
+    display: flex;
+}
+
+/* Review Colors ----------------------------------------------------------------------------------- */
+
+/* Positive Review */
+.game_review_summary.positive {
+    color: #66C0F4; 
+    font-weight: bold;
+}
+
+/* Mixed Review */
+.game_review_summary {
+    color: #B9A074;
+    font-weight: bold; 
+}
+
+/* Negative Review */
+.game_review_summary.negative {
+    color: #d44300; 
+    font-weight: bold;
+}
+
+/* General Review ------------------------------------------------------------------------------------- */
+
+.subtitle_column{
+    padding-right: 10px;
+    min-width: 150px;
+    color: #556772;
+    text-transform: uppercase;
+}
+
+.summary_column{
+    color: #66C0F4;
+}
+
+.review img{
+    width: 100%;
+    max-height: 211px;
+    overflow: hidden;
+}
+
+/* Tags List ---------------------------------------------------------------------- */
+
+.tags {
+    padding: 10px 0 10px 10px;
+}
+
+.tag_label{
+    color: #556772;    
+}
+
+.taglist ul{
+    /* position: absolute; */
+    margin: 5px 0 5px 0;
+    padding: 0;
+}
+
+.taglist ul li{
+    list-style: none;
+    display: inline-block;
+    background-color: #e3e9f7;
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+/* Buy Area ----------------------------------------------------------------------------------- */
+
+.buy_area{
+    display: flex;
+    margin: 0 40px 0 0;
+    width: 100%;
+    max-height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy_area .buy{
+    background-color: #d1d4dc;
+    display: flex;
+    margin-right: 40px;
+    align-items: center;
+    padding: 0 10px 0 15px;
+    border-radius: 5px;
+}
+
+.buy_area h2{
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.buy_area .buy a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #8cfca3;
+    color: black;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
+
+/* System ------------------------------------------------------------------------ */
+
+.system{
+
+    margin: 0 40px 0 0;
+}
+
+.system .system_title{
+    margin-left: 20px;
+    border-bottom: solid;
+    border-color: rgb(164, 164, 164);
+}
+
+.system .requirments{
+    display: flex;
+
+}
+
+.minimum, .reccomended{
+    margin: 0 5px 0 5px;
+    min-width: 330px;
+}
+
+.minimum ul li, .reccomended ul li{
+    margin: 15px 0;
+}
+
+.minimum .name, .reccomended .name{
+    margin-left: 20px;
+}
+
+/* Game About ----------------------------------------------------------------------------------- */
+.gameinfo{
+    margin: 50px 25px 30px 50px;
+}
+
+.gameinfo h2{
+    border-bottom: solid;
+    border-color: lightgrey;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  position: fixed;
+  margin-left: 150px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e3e9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#preloader video {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Footer */
+
+.footer{
+    margin-left: 260px;
+    background-color: #e3e9f7;
+    padding:10px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    border-top-style: solid;
+    border-color: lightgray;
+}
+
+.footer .row{
+    width:100%;
+    color:gray;
+    font-size:0.8em;
+}
+
+.footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+}
+
+.footer .row a:hover{
+    color: black;
+}
+
+.footer .row img{
+    height: 25px;
+    width: auto;
+    gap: 10px;
+}
