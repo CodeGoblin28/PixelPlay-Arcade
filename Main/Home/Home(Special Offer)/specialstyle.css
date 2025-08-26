@@ -192,7 +192,6 @@ body{
 /* Top Seller Games ------------------------------------------------------------------------------ */
 
 .topsell .game{
-    /* background-color: rgb(206, 206, 255); */
     margin-right: 55px;
     border-top-style: solid;
     border-color: rgb(211, 211, 211);
@@ -215,7 +214,7 @@ body{
 
 .topsell .game a img{
     height: 100px;
-    width: auto;
+    width: 100px;
     position: relative;
 }
 

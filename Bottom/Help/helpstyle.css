@@ -106,16 +106,6 @@ body{
     list-style: none;
 }
 
-/* .bottomnav ul li a{
-    display: block;
-    text-decoration: none;
-    font-size: 18px;
-    color: #000000;
-    position: relative;
-    padding: 10px 0 10px 10px;
-    align-items: center;
-} */
-
 
 .bottomnav ul li a:before{
     content: '';
@@ -143,8 +133,7 @@ body{
 
 Main{
     margin-left: 260px;
-    margin-top: 70px;
-    /* background: bisque; */
+    margin-top: 40px;
     min-height: 100vh;
 }
 

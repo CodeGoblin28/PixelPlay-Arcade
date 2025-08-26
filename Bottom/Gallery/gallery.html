@@ -32,114 +32,42 @@
             <div class="title">Gameplay Gallery</div>
             <div class="img-section">
 
-                <a href="screenshots/Ark SE.jpg" target="_blank">
-                    <img src="screenshots/Ark SE.jpg" alt="">
-                </a>
-
-            
-
-                <a href="screenshots/Balatro.jpg" target="_blank">
-                    <img src="screenshots/Balatro.jpg" alt="">
-                </a>
-
-
-
-                <a href="screenshots/Battle Realms.jpg" target="_blank">
-                    <img src="screenshots/Battle Realms.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Counter Strike.jpg" target="_blank">
-                    <img src="screenshots/Counter Strike.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Crusader Kings.jpg" target="_blank">
-                    <img src="screenshots/Crusader Kings.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Cyberpunk.jpg" target="_blank">
-                    <img src="screenshots/Cyberpunk.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Dota 2.jpg" target="_blank">
-                    <img src="screenshots/Dota 2.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Emberward.jpg" target="_blank">
-                    <img src="screenshots/Emberward.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Golf with friends.jpg" target="_blank">
-                    <img src="screenshots/Golf with friends.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Grounded.jpg" target="_blank">
-                    <img src="screenshots/Grounded.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Lethal Company.jpg" target="_blank">
-                    <img src="screenshots/Lethal Company.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Marvel Rivals.jpg" target="_blank">
-                    <img src="screenshots/Marvel Rivals.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Palworld.jpg" target="_blank">
-                    <img src="screenshots/Palworld.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Peak.jpg" target="_blank">
-                    <img src="screenshots/Peak.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Red Alert 2.jpg" target="_blank">
-                    <img src="screenshots/Red Alert 2.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Repo.jpg" target="_blank">
-                    <img src="screenshots/Repo.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Russian Fishing 4.jpg" target="_blank">
-                    <img src="screenshots/Russian Fishing 4.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Rust.jpg" target="_blank">
-                    <img src="screenshots/Rust.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Satisfactory.jpg" target="_blank">
-                    <img src="screenshots/Satisfactory.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Schedule I.jpg" target="_blank">
-                    <img src="screenshots/Schedule I.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Sea of thieves.jpg" target="_blank">
-                    <img src="screenshots/Sea of thieves.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Tabletop Sim.jpg" target="_blank">
-                    <img src="screenshots/Tabletop Sim.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Umamusume.jpg" target="_blank">
-                    <img src="screenshots/Umamusume.jpg" alt="">
-                </a>
-
-                <a href="screenshots/Uno.jpg" target="_blank">
-                    <img src="screenshots/Uno.jpg" alt="">
-                </a>
-
-                <a href="screenshots/War Thunder.jpg" target="_blank">
-                    <img src="screenshots/War Thunder.jpg" alt="">
-                </a>
+                <img src="screenshots/Ark SE.jpg" alt="">
+                <img src="screenshots/Balatro.jpg" alt="">
+                <img src="screenshots/Battle Realms.jpg" alt="">
+                <img src="screenshots/Counter Strike.jpg" alt="">
+                <img src="screenshots/Crusader Kings.jpg" alt="">
+                <img src="screenshots/Cyberpunk.jpg" alt="">
+                <img src="screenshots/Dota 2.jpg" alt="">
+                <img src="screenshots/Emberward.jpg" alt="">
+                <img src="screenshots/Golf with friends.jpg" alt="">
+                <img src="screenshots/Grounded.jpg" alt="">
+                <img src="screenshots/Lethal Company.jpg" alt="">
+                <img src="screenshots/Marvel Rivals.jpg" alt="">
+                <img src="screenshots/Palworld.jpg" alt="">
+                <img src="screenshots/Peak.jpg" alt="">
+                <img src="screenshots/Red Alert 2.jpg" alt="">
+                <img src="screenshots/Repo.jpg" alt="">
+                <img src="screenshots/Russian Fishing 4.jpg" alt="">
+                <img src="screenshots/Rust.jpg" alt="">
+                <img src="screenshots/Satisfactory.jpg" alt="">
+                <img src="screenshots/Schedule I.jpg" alt="">
+                <img src="screenshots/Sea of thieves.jpg" alt="">
+                <img src="screenshots/Tabletop Sim.jpg" alt="">
+                <img src="screenshots/Umamusume.jpg" alt="">
+                <img src="screenshots/Uno.jpg" alt="">
+                <img src="screenshots/War Thunder.jpg" alt="">
 
             </div>
         </div>
     </div>
 </Main>
+
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+
 
 <footer>
     <Div class="footer">
@@ -157,4 +85,26 @@
 
 
 </body>
+
+<script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".img-section img");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+        }
+    });
+</script>
+
+
 </html>

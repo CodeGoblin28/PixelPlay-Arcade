@@ -135,13 +135,11 @@ body{
 /* ------------------------------------------------------------------------------- */
 main{
     margin-left: 260px;
-    /* background-color: yellow; */
     min-height: 100vh;
 }
 
 .wrapper{
-    /* background-color: aqua; */
-    margin: 70px 20px 0 20px;
+    margin: 40px 20px 0 20px;
     height: 100%;
 }
 
@@ -152,13 +150,12 @@ main{
 .section h1{
     margin: 0 0 40px 30px;
     font-size: 40px;
-    /* background-color: bisque; */
 }
 
 /* Games----------------------------------------------------------- */
 
 .gamelist{
-    /* background-color: rgb(170, 101, 101); */
+
     width: 95%;
     position: relative;
     margin-left: auto;
@@ -185,7 +182,6 @@ main{
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
-    /* background-color: cadetblue; */
 }
 
 .title .name{
@@ -201,7 +197,7 @@ main{
 }
 
 .links{
-    /* background-color: azure; */
+
     padding: 10px;
 }
 
@@ -209,7 +205,6 @@ main{
     text-decoration: none;
     color: black;
     padding: 5px 10px;
-
     font-size: 25px;
 }
 
@@ -219,10 +214,18 @@ main{
     border-radius: 5px;
 }
 
+.links .info:hover{
+    border: solid, 2px, rgb(194, 194, 194);    
+}
+
 .links .buy{
     background-color: #8cfca3;
     border: solid, 2px, rgb(95, 238, 23);
     border-radius: 5px;
+}
+
+.links .buy:hover{
+    border: solid, 2px, rgb(79, 201, 17);
 }
 
 /* ------------------------------------------------------------------------- */

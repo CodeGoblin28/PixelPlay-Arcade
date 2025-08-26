@@ -159,17 +159,14 @@ body{
 main{
     margin-left: 260px;
     min-height: 100vh;
-    /* background-color: antiquewhite; */
 }
 
 .wrapper{
-    /* background-color: rgb(137, 137, 255); */
-    margin: 70px 20px 0 20px;
+    margin: 40px 20px 0 20px;
 }
 
 .selection{
     width: 95%;
-    /* background-color: aquamarine; */
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -180,13 +177,9 @@ main{
 }
 
 .selection .genre{
-    /* background-color: bisque; */
     border: #676767, 2px, solid;
     border-color: #cbcbcb;
     min-width: 270px;
-    /* align-items: center;
-    justify-content: space-between;
-    position: relative; */
     padding: 5px 20px;
     border-radius: 20px;
     background-color: #e2e4ea;
@@ -210,6 +203,45 @@ main{
     font-size: 40px;
 }
 
+/* Top Section------------------------------------------------------------------- */
+
+.suggest .topsection{
+    margin-right: 55px;
+}
+
+.suggest .topsection h2{
+    font-size: 30px;
+}
+
+.suggest .topsection ul{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.suggest .topsection ul li{
+    list-style: none;
+    font-weight: 550;
+    padding-right: 40px;
+}
+
+.suggest .topsection ul .T{
+    padding-left: 20px;
+}
+
+.suggest .topsection ul .G{
+    padding-Left: 450px;
+    padding-right: 340px;
+}
+
+.suggest .topsection ul .DP {
+    margin-left: auto;
+    margin-right: 40px;
+    display: flex;
+    gap: 45px;
+}
+
+
 /* Suggested Games ------------------------------------------------------------------------------ */
 
 .suggest{
@@ -222,7 +254,6 @@ main{
 }
 
 .suggest .game{
-    /* background-color: rgb(206, 206, 255); */
     margin-right: 55px;
     border-top-style: solid;
     border-color: rgb(211, 211, 211);
@@ -271,9 +302,7 @@ main{
     align-items: flex-end;
     margin-left: auto;
     margin-right: 40px;
-    /* gap: 2.5rem; */
     grid-template-columns: repeat(auto-fit);
-    /* background-color: aqua; */
     min-width: 150px;
     justify-content: space-between;
 }
