@@ -177,6 +177,29 @@ body{
     margin-top: 0;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  position: fixed;
+  margin-left: 150px;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e3e9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#preloader video {
+  max-width: 50%;
+  max-height: 50%;
+}
+
 /* ------------------------------------------------------------------------ */
 /* Footer */
 
@@ -273,6 +296,13 @@ ul{
 
 h2{
     padding: 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  margin-left: 0;
 }
 
 /* Footer--------------------------------------------- */
