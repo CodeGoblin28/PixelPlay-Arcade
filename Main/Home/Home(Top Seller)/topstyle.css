@@ -162,7 +162,6 @@ body{
 }
 
 .topsell .topsection ul .DP {
-
     margin-right: 60px;
     display: flex;
     gap: 50px;
@@ -202,8 +201,6 @@ body{
     margin-left: 30%;
     position: absolute;
 }
-
-
 
 .topsell .game a ul li{
     list-style: none;
@@ -479,6 +476,7 @@ h2{
     width: 95%;
     padding: 0;
     margin: 0 auto;
+    font-size: 10px;
 }
 }
 

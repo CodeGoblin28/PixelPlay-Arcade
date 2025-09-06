@@ -328,12 +328,13 @@ h2{
     width: 95%;
     padding: 0;
     margin: 0 auto;
+    font-size: 10px;
 }
 }
 
 
 /* Hide Navigation Burger */
-@media (min-width: 769px) {
+@media (min-width: 801px) {
 .nav-toggle {
     display: none;
 }

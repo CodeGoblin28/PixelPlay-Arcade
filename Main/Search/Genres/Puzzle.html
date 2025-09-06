@@ -3,253 +3,240 @@
 <head>
     <Title>PixelPlay Arcade</Title>
     <link rel="stylesheet" href="genrenstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <Nav class="navbar">
-        <div class="navdiv">
-            <div class="topnav">
-                <ul>
-                    <li class="logo"><a class="backban" href="../../../index.html"><img src="../../../images/icons/joystick.png" alt="">PixelPlay Arcade</a></li>
-                    <li class="icon"><a class="navitem" href="../../Home/Home(Recommended)/reccomended.html"><img src="../../../images/icons/home.png" alt="">Home</a></li>
-                    <li class="icon"><a class="navitem" href="../../Library/libindex.html"><img src="../../../images/icons/library.png" alt="">Library</a></li>
-                    <li class="icon"><a class="navitem" href="../../Search/seaindex.html"><img src="../../../images/icons/search.png" alt="">Search</a></li>
-                </ul>
-            </div>
+    <nav class="navbar" id="navbar">
+        <button class="nav-toggle" id="navToggle">☰</button>
 
-            <div class="bottomnav">
-                <ul>
-                    <li class="icon"><a class="navitem" href="../../../Bottom/Gallery/gallery.html"><img src="../../../images/icons/gallery.png" alt="">Gallery</a></li>
-                    <li class="icon"><a class="navitem" href="../../../Bottom/Help/help.html"><img src="../../../images/icons/help.png" alt="">Help</a></li>
-                    <li class="icon"><a class="navitem" href="../../../Bottom/About/about.html"><img src="../../../images/icons/info.png" alt="">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </Nav>
-
-<main>
-<div class="wrapper">
-    <div class="topsell">
-        <h1>Search</h1>
-        <div class="selection">
-            <div class="genre">
-                <a href="Action.html">
-                <h2>Action</h2>
-                <img src="../Browse Icon/action.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Simulation.html">
-                <h2>Simulation</h2>
-                <img src="../Browse Icon/Simulation.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Puzzle.html">
-                <h2>Puzzle</h2>
-                <img src="../Browse Icon/puzzle.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Sports.html">
-                <h2>Sports</h2>
-                <img src="../Browse Icon/Sports.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Adventure.html">
-                <h2>Adventure</h2>
-                <img src="../Browse Icon/Adventure.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Roleplay.html">
-                <h2>Role-Play</h2>
-                <img src="../Browse Icon/Role Play.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Strategy.html">
-                <h2>Strategy</h2>
-                <img src="../Browse Icon/Strategy.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Cards.html">
-                <h2>Cards</h2>
-                <img src="../Browse Icon/Cards.png" alt="">
-                </a>
-            </div>
-
-            <div class="genre">
-                <a href="Board.html">
-                <h2>Board</h2>
-                <img src="../Browse Icon/Board.png" alt="">
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="topsection">
-            <h2>Puzzle Games</h2>
+        <div class="topnav" id="topnav">
             <ul>
-                <li class="T">Title</li>
-                <li class="G">Genre</li>
-                <li class="DP">
-                    <span class="disc-label">Discount</span>
-                    <span class="price-label">Price</span>
-                </li>
+                <li class="logo"><a class="backban" href="../../../index.html"><img src="../../../images/icons/joystick.png" alt="">PixelPlay Arcade</a></li>
+                <li class="icon"><a class="navitem" href="../../Home/Home(Recommended)/reccomended.html"><img src="../../../images/icons/home.png" alt="">Home</a></li>
+                <li class="icon"><a class="navitem" href="../../Library/libindex.html"><img src="../../../images/icons/library.png" alt="">Library</a></li>
+                <li class="icon"><a class="navitem" href="../../Search/seaindex.html"><img src="../../../images/icons/search.png" alt="">Search</a></li>
             </ul>
         </div>
 
-        <div class="game">
-            <a href="../../contentdesc/Balatro.html">
-                <img src="../../contentdesc/Logo/Balatro.png" alt="">
-                <h3>BALATRO</h3>
-                <ul>
-                            <li>Card Game</li>
-                            <li>Roguelike</li>
-                            <li>Turn Based</li>
-                            <li>Singleplayer</li>
-                </ul>
-                <div class="pricebox">
-                    <p class="disc">None</p>
-                    <p class="price">P485.00</p>
-                </div>
-            </a>
+        <div class="bottomnav" id="bottomnav">
+            <ul>
+                <li class="icon"><a class="navitem" href="../../../Bottom/Gallery/gallery.html"><img src="../../../images/icons/gallery.png" alt="">Gallery</a></li>
+                <li class="icon"><a class="navitem" href="../../../Bottom/Help/help.html"><img src="../../../images/icons/help.png" alt="">Help</a></li>
+                <li class="icon"><a class="navitem" href="../../../Bottom/About/about.html"><img src="../../../images/icons/info.png" alt="">About</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="game">
-            <a href="../../contentdesc/Emberward.html">
-                <img src="../../contentdesc/Logo/Emberward.png" alt="">
-                <h3>Emberward</h3>
-                <ul>
-                            <li>Tower Defense</li>
-                            <li>Strategy</li>
-                            <li>Rougelike</li>
-                            <li>Singleplayer</li>
-                </ul>
-                <div class="pricebox">
-                    <p class="disc">None</p>
-                    <p class="price">P485.00</p>
+    <div class="wrapper">
+        <div class="search">
+            <div class="section">
+                <h1>Search</h1>
+                <div class="selection">
+                    <div class="genre">
+                        <a href="Action.html">
+                        <h2>Action</h2>
+                        <img src="../Browse Icon/action.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Simulation.html">
+                        <h2>Simulation</h2>
+                        <img src="../Browse Icon/Simulation.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Puzzle.html">
+                        <h2>Puzzle</h2>
+                        <img src="../Browse Icon/puzzle.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Sports.html">
+                        <h2>Sports</h2>
+                        <img src="../Browse Icon/Sports.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Adventure.html">
+                        <h2>Adventure</h2>
+                        <img src="../Browse Icon/Adventure.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Roleplay.html">
+                        <h2>Role-Play</h2>
+                        <img src="../Browse Icon/Role Play.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Strategy.html">
+                        <h2>Strategy</h2>
+                        <img src="../Browse Icon/Strategy.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Cards.html">
+                        <h2>Cards</h2>
+                        <img src="../Browse Icon/Cards.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="genre">
+                        <a href="Board.html">
+                        <h2>Board</h2>
+                        <img src="../Browse Icon/Board.png" alt="">
+                        </a>
+                    </div>
+
                 </div>
-            </a>
-        </div>
 
-        <div class="game">
-            <a href="../../contentdesc/Peak.html">
-                <img src="../../contentdesc/Logo/Peak.png" alt="">
-                <h3>PEAK</h3>
-                <ul>
-                            <li>Adventure</li>
-                            <li>Exploration</li>
-                            <li>Co-op</li>
-                            <li>Multiplayer</li>
-                </ul>
-                <div class="pricebox">
-                    <p class="disc">None</p>
-                    <p class="price">P249.00</p>
+                <div class="suggest">
+                    <div class="topsection">
+                        <h2>Puzzle Games</h2>
+                        <ul>
+                            <li class="T">Title</li>
+                            <li class="G">Genre</li>
+                            <li class="DP">
+                                <span class="disc-label">Discount</span>
+                                <span class="price-label">Price</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="game">
+                        <a href="../../contentdesc/Balatro.html">
+                            <img src="../../contentdesc/Logo/Balatro.png" alt="">
+                            <h3>BALATRO</h3>
+                            <ul>
+                                        <li>Card Game</li>
+                                        <li>Roguelike</li>
+                                        <li>Turn Based</li>
+                                        <li>Singleplayer</li>
+                            </ul>
+                            <div class="pricebox">
+                                <p class="disc">None</p>
+                                <p class="price">P485.00</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="game">
+                        <a href="../../contentdesc/Emberward.html">
+                            <img src="../../contentdesc/Logo/Emberward.png" alt="">
+                            <h3>Emberward</h3>
+                            <ul>
+                                        <li>Tower Defense</li>
+                                        <li>Strategy</li>
+                                        <li>Rougelike</li>
+                                        <li>Singleplayer</li>
+                            </ul>
+                            <div class="pricebox">
+                                <p class="disc">None</p>
+                                <p class="price">P485.00</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="game">
+                        <a href="../../contentdesc/Peak.html">
+                            <img src="../../contentdesc/Logo/Peak.png" alt="">
+                            <h3>PEAK</h3>
+                            <ul>
+                                        <li>Adventure</li>
+                                        <li>Exploration</li>
+                                        <li>Co-op</li>
+                                        <li>Multiplayer</li>
+                            </ul>
+                            <div class="pricebox">
+                                <p class="disc">None</p>
+                                <p class="price">P249.00</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="game">
+                        <a href="../../contentdesc/Tabletop Simulator.html">
+                            <img src="../../contentdesc/Logo/tabletopsim.png" alt="">
+                            <h3>Satisfactory</h3>
+                            <ul>
+                                        <li>Tabletop</li>
+                                        <li>Simulation</li>
+                                        <li>Board Game</li>
+                                        <li>Multiplayer</li>
+                            </ul>
+                            <div class="pricebox">
+                                <p class="disc">None</p>
+                                <p class="price">P615.00</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="game">
+                        <a href="../../contentdesc/Golf With Friends.html">
+                            <img src="../../contentdesc/Logo/Golf with Friends.png" alt="">
+                            <h3>Golf With Your Friends</h3>
+                            <ul>
+                                        <li>Sports</li>
+                                        <li>Golf</li>
+                                        <li>Casual</li>
+                                        <li>Multiplayer</li>
+                            </ul>
+                            <div class="pricebox">
+                                <p class="disc">None</p>
+                                <p class="price">P599.00</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
-
-        <div class="game">
-            <a href="../../contentdesc/Tabletop Simulator.html">
-                <img src="../../contentdesc/Logo/tabletopsim.png" alt="">
-                <h3>Satisfactory</h3>
-                <ul>
-                            <li>Tabletop</li>
-                            <li>Simulation</li>
-                            <li>Board Game</li>
-                            <li>Multiplayer</li>
-                </ul>
-                <div class="pricebox">
-                    <p class="disc">None</p>
-                    <p class="price">P615.00</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="game">
-            <a href="../../contentdesc/Golf With Friends.html">
-                <img src="../../contentdesc/Logo/Golf with Friends.png" alt="">
-                <h3>Golf With Your Friends</h3>
-                <ul>
-                            <li>Sports</li>
-                            <li>Golf</li>
-                            <li>Casual</li>
-                            <li>Multiplayer</li>
-                </ul>
-                <div class="pricebox">
-                    <p class="disc">None</p>
-                    <p class="price">P599.00</p>
-                </div>
-            </a>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-</div>
-</main>
 
 
-<div id="preloader">
-    <video id="preloader-video" autoplay muted playsinline>
-        <source src="../../../animation/Joyst.mp4" type="video/mp4" />
-    </video>
-</div>
+    <div id="preloader">
+        <video id="preloader-video" autoplay muted playsinline>
+            <source src="../../../animation/Joyst.mp4" type="video/mp4" />
+        </video>
+    </div>
 
-<footer>
-    <Div class="footer">
-        <div class="row">
-            <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=retamaliankirby28@gmail.com&tf=1"><img src="../../../images/Footer Icons/email.png" alt=""></a>
-            <a href="https://www.facebook.com/iankirby.retanal.1"><img src="../../../images/Footer Icons/facebok.png" alt=""></a>
-            <a href="https://www.youtube.com/@PixelPlayArcade"><img src="../../../images/Footer Icons/youtube.png" alt=""></a>
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=retamaliankirby28@gmail.com&tf=1"><img src="../../../images/Footer Icons/email.png" alt=""></a>
+                <a href="https://www.facebook.com/iankirby.retanal.1"><img src="../../../images/Footer Icons/facebok.png" alt=""></a>
+                <a href="https://www.youtube.com/@PixelPlayArcade"><img src="../../../images/Footer Icons/youtube.png" alt=""></a>
+            </div>
+
+            <div class="row">
+                PIXELPLAY ARCADE Copyright © 2025 - All rights reserved || Designed By: Ian Kirby Retanal || This website is for a school project only.
+            </div>
         </div>
+    </footer>
 
-        <div class="row">
-            PIXELPLAY ARCADE Copyright © 2025 - All rights reserved || Designed By: Ian Kirby Retanal || This website is part of a school project..
-        </div>
-    </Div>
-</footer>
+    <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+    document.querySelector("#topnav ul").classList.toggle("show");
+    document.querySelector("#bottomnav ul").classList.toggle("show");
+    });
+    </script>
 
 </body>
 
-    <script>
-    const video = document.getElementById('preloader-video');
+<script>
+  window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
 
-    video.addEventListener('ended', () => {
-        preloader.style.display = 'none';
-        document.body.style.overflow = 'auto'; 
-    });
-
-
-    document.body.style.overflow = 'hidden';
-    </script>
+  document.body.style.overflow = 'hidden';
+</script>
 
 </html>

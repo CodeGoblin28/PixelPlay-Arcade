@@ -30,7 +30,7 @@ body{
 .logo img{
     position: relative;
     top: 10px;
-    padding: 0 10px 0 0;
+    padding: 0 5.5px 0 0;
     width: 40px;
     height: auto;
 }
@@ -42,22 +42,32 @@ body{
     width: auto;
 }
 
-.topnav ul{
+.topnav ul, .bottomnav ul{
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 260px;
     position: fixed;
-    top: 0;
     Left: 0;
-    z-index: 2;
+    z-index: 5;
     border-right-style: solid;
     border-color: lightgray;
+    background-color: #e3e9f7;
+    transform: translateX(0);
 }
 
-.topnav ul li{
+.topnav ul{
+    height: 100%;
+    top: 0;
+}
+
+.bottomnav ul{
+    bottom: 0;
+}
+
+.topnav ul li, .bottomnav ul li{
     list-style: none;
 }
+
 
 .navitem:before{
     content: '';
@@ -72,11 +82,7 @@ body{
     transition: all 300ms ease-in-out;
 }
 
-.topnav ul li a:hover{
-    color: black;
-}
-
-.topnav ul li a:hover::before{
+.topnav ul li a:hover::before, .bottomnav ul li a:hover::before{
     width: 95%;
 }
 
@@ -92,47 +98,16 @@ body{
     text-decoration: none;
 }
 
-/* <-------------------------------------------------------------------> */
-/* Bottom Sidebar */
 
-.bottomnav ul{
-    margin-bottom: 0;
-    padding: 0;
-    bottom: 0;
-    width: 260px;
-    position: fixed;
-    Left: 0;
-    z-index: 2;
-    border-right-style: solid;
-    border-color: lightgray;
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
 }
-
-.bottomnav ul li{
-    list-style: none;
-}
-
-
-.bottomnav ul li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: lightgray;
-    border-radius: 40px 0 0 40px;
-    z-index: -1;
-    transition: all 300ms ease-in-out;
-}
-
-.bottomnav ul li a:hover{
-    color: black;
-}
-
-.bottomnav ul li a:hover::before{
-    width: 95%;
-}
-
 
 /* ------------------------------------------------------------------------------- */
 /* Main Body */
@@ -154,7 +129,7 @@ body{
 }
 
 .page h3{
-    margin: 0 0 0 50px;
+    margin: 0 80px 10px 50px;
     padding: 50px 0 0 0;
     font-size: 35px;
 }
@@ -294,7 +269,7 @@ body{
 
 .buy_area h2{
     margin-left: 20px;
-    font-size: 30px;
+    font-size: clamp(12px, 4vw, 28px);
 }
 
 .buy_area .buy a{
@@ -315,7 +290,6 @@ body{
 /* System ------------------------------------------------------------------------ */
 
 .system{
-
     margin: 0 40px 0 0;
 }
 
@@ -332,7 +306,7 @@ body{
 
 .minimum, .reccomended{
     margin: 0 5px 0 5px;
-    min-width: 330px;
+    min-width: 45%;
 }
 
 .minimum ul li, .reccomended ul li{
@@ -410,4 +384,148 @@ body{
     height: 25px;
     width: auto;
     gap: 10px;
+}
+
+
+@media (max-width: 768px){
+/* Navigations-------------------------- */
+h2{
+    margin-top: 0;
+    padding: 0; 
+}
+
+.topnav ul, .bottomnav ul {
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+}
+
+.topnav ul.show, .bottomnav ul.show {
+    transform: translateX(0);
+}
+
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+    background: #e3e9f7;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: block;
+    margin: 10px;
+}
+
+/* Content left--------------------------------------------------- */
+.wrapper, .footer{
+    margin-left: 0;
+}
+
+.page{
+    width: 97%;
+    margin-left: 1.5%;
+    justify-content: center;
+}
+
+/* Main-------------------------------------------------------------------- */
+.page h3{
+    font-size: clamp(20px, 10vw, 40px);
+    padding: 30px 0 0 0;
+    margin: 0 80px 10px 3%;
+}
+
+.review {
+    margin: 0 0 0 2.5%;
+    max-width: 95%;
+    border-radius: 5px;
+}
+
+.subtitle_column{
+    padding-right: 10px;
+    min-width: 150px;
+    color: #556772;
+    text-transform: uppercase;
+}
+
+.review img{
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.toppart{
+    flex-direction: column;
+}
+
+.system{
+    margin: 0 0 0 0;
+}
+
+.buy_area h2{
+    margin-bottom: 0;
+    font-size: clamp(12px, 4vw, 28px);
+}
+
+.buy_area {
+    margin: 0 40px 20px 0;
+}
+
+.leftside{
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.system .system_title{
+    margin: 0 20px;
+}
+
+.gameinfo p{
+    font-size: 10px;
+}
+
+.minimum, .reccomended {
+    margin: 0 0 0 0;
+    min-width: 45%;
+}
+
+.gameinfo{
+    width: 97%;
+    margin: 40px 0 30px 1.5%;
+}
+
+.buy_area .buy {
+    margin-right: 20px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Loading Animation */
+
+#preloader {
+  margin-left: 0;
+}
+
+/* Footer--------------------------------------------- */
+.footer{
+    width: 100%; 
+    position: relative;
+    bottom: 0;
+}
+
+.footer .row{
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 10px;
+}
+}
+
+
+/* Hide Navigation Burger */
+@media (min-width: 769px) {
+.nav-toggle {
+    display: none;
+}
 }

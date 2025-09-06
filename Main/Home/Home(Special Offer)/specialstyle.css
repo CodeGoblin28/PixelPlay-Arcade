@@ -140,14 +140,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    /* flex-wrap: wrap; */
     gap: 20px;
 }
 
 .topsell .topsection ul li{
     list-style: none;
     font-weight: 550;
-    /* padding: 0 10px; */
 }
 
 .topsell .topsection ul .T{
@@ -479,6 +477,7 @@ h2{
     width: 95%;
     padding: 0;
     margin: 0 auto;
+    font-size: 10px;
 }
 }
 

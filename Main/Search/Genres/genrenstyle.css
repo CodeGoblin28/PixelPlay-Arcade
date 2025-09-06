@@ -30,7 +30,7 @@ body{
 .logo img{
     position: relative;
     top: 10px;
-    padding: 0 10px 0 0;
+    padding: 0 5.5px 0 0;
     width: 40px;
     height: auto;
 }
@@ -42,24 +42,32 @@ body{
     width: auto;
 }
 
-.topnav ul{
+.topnav ul, .bottomnav ul{
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 260px;
     position: fixed;
-    top: 0;
     Left: 0;
     z-index: 5;
-    height: 100%;
-    width: 260px;
     border-right-style: solid;
     border-color: lightgray;
+    background-color: #e3e9f7;
+    transform: translateX(0);
 }
 
-.topnav ul li{
+.topnav ul{
+    height: 100%;
+    top: 0;
+}
+
+.bottomnav ul{
+    bottom: 0;
+}
+
+.topnav ul li, .bottomnav ul li{
     list-style: none;
 }
+
 
 .navitem:before{
     content: '';
@@ -74,11 +82,9 @@ body{
     transition: all 300ms ease-in-out;
 }
 
-.topnav ul li a:hover{
-    color: black;
-}
 
-.topnav ul li a:hover::before{
+
+.topnav ul li a:hover::before, .bottomnav ul li a:hover::before{
     width: 95%;
 }
 
@@ -94,64 +100,31 @@ body{
     text-decoration: none;
 }
 
-/* <-------------------------------------------------------------------> */
-/* Bottom Sidebar */
 
-.bottomnav ul{
-    margin-bottom: 0;
-    padding: 0;
-    bottom: 0;
-    width: 260px;
-    position: fixed;
-    Left: 0;
-    z-index: 5;
-    border-right-style: solid;
-    border-color: lightgray;
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
 }
-
-.bottomnav ul li{
-    list-style: none;
-}
-
-.bottomnav ul li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: lightgray;
-    border-radius: 40px 0 0 40px;
-    z-index: -1;
-    transition: all 300ms ease-in-out;
-}
-
-.bottomnav ul li a:hover{
-    color: black;
-}
-
-.bottomnav ul li a:hover::before{
-    width: 95%;
-}
-
 
 /* ------------------------------------------------------------------------------- */
-/* Main Body */
-main{
-    margin-left: 260px;
-    min-height: 100vh;
-}
-
+/* Main */
 .wrapper{
-    margin: 40px 20px 0 20px;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    justify-content: center;
 }
 
-.topsell{
-    min-height: 55vh;
-    padding-left: 30px;
+.search{
+    margin: 40px 0px 0 20px;
 }
 
 .selection{
+    width: 95%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -164,7 +137,7 @@ main{
 .selection .genre{
     border: #676767, 2px, solid;
     border-color: #cbcbcb;
-    min-width: 270px;
+    width: 24%;
     padding: 5px 20px;
     border-radius: 20px;
     background-color: #e2e4ea;
@@ -183,60 +156,69 @@ main{
     color: #000000;
 }
 
-.topsell h1{
-    margin: 0 0 20px 0;
+.section h1{
+    width: auto;
+    margin: 0 0 20px 30px;
     font-size: 40px;
 }
 
 /* Top Section------------------------------------------------------------------- */
 
-.topsell .topsection{
-    margin-right: 55px;
+.suggest{
+    min-width: 95%;
+    justify-self: center;
 }
 
-.topsell .topsection h2{
+.suggest .topsection{
+    margin-right: 30px;
+}
+
+.suggest .topsection h2{
     font-size: 30px;
 }
 
-.topsell .topsection ul{
+.suggest .topsection ul{
     padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between; 
+    gap: 20px;
 }
 
-.topsell .topsection ul li{
+.suggest .topsection ul li{
     list-style: none;
     font-weight: 550;
-    padding-right: 40px;
 }
 
-.topsell .topsection ul .T{
+.suggest .topsection ul .T{
+    flex: 1.5;
     padding-left: 20px;
 }
 
-.topsell .topsection ul .G{
-    padding-Left: 450px;
-    padding-right: 340px;
+.suggest .topsection ul .G{
+    flex: 2;
+    min-width: 50px;
 }
 
-.topsell .topsection ul .DP {
-    margin-left: auto;
-    margin-right: 40px;
+.suggest .topsection ul .DP {
+    margin-right: 60px;
     display: flex;
-    gap: 45px;
+    gap: 50px;
+    flex-shrink: 0;
 }
 
-/* Top Seller Games ------------------------------------------------------------------------------ */
 
-.topsell .game{
-    /* background-color: rgb(206, 206, 255); */
-    margin-right: 55px;
+/* Suggested Games ------------------------------------------------------------------------------ */
+
+.suggest .game{
+    margin-right: 30px;
     border-top-style: solid;
     border-color: rgb(211, 211, 211);
     margin-bottom: 5px;
 }
 
-.topsell .game a{
+.suggest .game a{
     display: flex;
     text-decoration: none;
     color: black;
@@ -246,22 +228,22 @@ main{
     padding-right: 20px;
 }
 
-.topsell .game a h3{
+.suggest .game a h3{
     margin-left: 20px;
 }
 
-.topsell .game a img{
+.suggest .game a img{
     height: 100px;
-    width: auto;
+    width: 100px;
     position: relative;
 }
 
-.topsell .game a ul{
-    margin-left: 400px;
+.suggest .game a ul{
+    margin-left: 30%;
     position: absolute;
 }
 
-.topsell .game a ul li{
+.suggest .game a ul li{
     list-style: none;
     display: inline-block;
     background-color: #e3e9f7;
@@ -272,21 +254,19 @@ main{
     border-color: rgb(170, 170, 170);
 }
 
-.topsell .game a .pricebox {
+.suggest .game a .pricebox {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     margin-left: auto;
     margin-right: 40px;
-    /* gap: 2.5rem; */
     grid-template-columns: repeat(auto-fit);
-    /* background-color: aqua; */
     min-width: 150px;
     justify-content: space-between;
 }
 
 
-.topsell .game a .disc{
+.suggest .game a .disc{
     background-color: #e3e9f7;
     padding: 3px;
     border-radius: 5px;
@@ -294,6 +274,7 @@ main{
     border-width: 1px;
     border-color: rgb(170, 170, 170);
 }
+
 
 /* ------------------------------------------------------------------------- */
 /* Loading Animation */
@@ -310,7 +291,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 1;
 }
 
 #preloader video {
@@ -322,7 +303,10 @@ main{
 /* Footer */
 
 .footer{
+    position: relative;
+    bottom: 0;
     margin-left: 260px;
+    width: calc(100% - 260px); 
     background-color: #e3e9f7;
     padding:10px 0px;
     font-family: 'Play', sans-serif;
@@ -354,4 +338,240 @@ main{
 }
 
 
+/* Genre Tags Responsive------------------------------------------------ */
+
+@media (max-width: 1300px){
+.suggest .topsection ul .G{
+    flex: 1;
+    min-width: 50px;
+}
+
+.suggest .game a ul{  
+    margin-left: 35%;
+    column-count: 2;
+}    
+}
+
+@media (max-width: 1170px) {
+.suggest .game a ul {
+    display: none;
+}
+
+.suggest .topsection ul .G {
+    display: none;
+}
+
+}
+
+
+@media(max-width: 1050px){
+.selection .genre {
+    width: 35%;
+}   
+}
+
+
+@media (max-width: 800px){
+/* Navigations-------------------------- */
+h2{
+    margin-top: 0;
+    padding: 0 5%; 
+}
+
+.topnav ul, .bottomnav ul {
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+}
+
+.topnav ul.show, .bottomnav ul.show {
+    transform: translateX(0);
+}
+
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+    background: #e3e9f7;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: block;
+    margin: 10px;
+}
+
+
+/* Content left--------------------------------------------------- */
+.wrapper, .footer{
+    margin-left: 0;
+}
+
+.wrapper{
+    width: 97%;
+    margin-left: 1.5%;
+    justify-content: center;
+}
+
+.search {
+    margin: 40px 0px 0 10px;
+}
+
+/* Main-------------------------------------------------------------------- */
+
+
+.selection{
+    gap: 5px 5px;
+    margin-bottom: 20px;
+}
+
+.selection .genre {
+    width: 42%;
+    height: 67px;
+    align-content: center;
+}   
+
+.selection .genre a{
+    height: 50px;
+}
+
+.selection .genre a h2{
+    margin: 0;
+}
+
+
+.suggest{
+    padding-left: 0;
+    padding-top: 0;
+    width: 100%;
+    display: grid;
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+
+
+/* Titles */
+.suggest .topsection h2{
+    margin-bottom: 10px;
+}
+
+.suggest .topsection{
+    margin-right: 0;
+}
+
+.suggest .topsection ul .T{
+    margin-right: 50px;
+}
+
+
+/* Games */
+.suggest .game{
+    margin-right: 0;
+}
+
+.suggest .game a h3 {
+    margin: 0 20px;
+}
+
+.suggest .topsection ul .DP {
+    margin-right: 70px;
+    gap: 40px;
+}
+
+.suggest .game a .disc{
+    padding: 0;
+    margin: 0;
+    padding: 3px;
+}
+
+.suggest .game a .price{
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer--------------------------------------------- */
+.footer{
+    width: 100%; 
+    position: relative;
+    bottom: 0;
+}
+
+.footer .row{
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+}
+}
+
+
+/* Hide Navigation Burger */
+@media (min-width: 801px) {
+.nav-toggle {
+    display: none;
+}
+}
+
+@media (max-width: 630px) {
+.selection{
+    gap: 0 0;
+    margin-bottom: 20px;
+}
+
+.selection .genre {
+    width: 42%;
+    height: 67px;
+    align-content: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}    
+
+.selection .genre a h2{
+    font-size: 20px;
+}
+
+.selection .genre a img{
+    width: 40px;
+    height: auto;
+}
+}
+
+@media (max-width: 450px) {
+.selection .genre a h2{
+    font-size: 15px;
+}
+}
+
+
+@media (max-width: 450px) {
+/* -------------------------------------------------------------------- */
+/* Stack Price */
+
+.suggest .topsection ul .DP {
+    margin-right: 20px;
+    row-gap: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+.suggest .game a .disc{
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    text-align: center;
+}
+
+.suggest .game a .pricebox {
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    row-gap: 10px;
+    min-width: 50px;
+}
+}
 
