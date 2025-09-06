@@ -30,7 +30,7 @@ body{
 .logo img{
     position: relative;
     top: 10px;
-    padding: 0 10px 0 0;
+    padding: 0 0 0 0;
     width: 40px;
     height: auto;
 }
@@ -42,25 +42,34 @@ body{
     width: auto;
 }
 
-.topnav ul{
+/* ---------------------------------------------------- */
+/* Improved Navigation */
+.topnav ul, .bottomnav ul{
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 260px;
     position: fixed;
-    top: 0;
     Left: 0;
     z-index: 5;
-    height: 100%;
-    width: 260px;
     border-right-style: solid;
     border-color: lightgray;
     background-color: #e3e9f7;
+    transform: translateX(0);
 }
 
-.topnav ul li{
+.topnav ul{
+    height: 100%;
+    top: 0;
+}
+
+.bottomnav ul{
+    bottom: 0;
+}
+
+.topnav ul li, .bottomnav ul li{
     list-style: none;
 }
+
 
 .navitem:before{
     content: '';
@@ -75,11 +84,7 @@ body{
     transition: all 300ms ease-in-out;
 }
 
-.topnav ul li a:hover{
-    color: black;
-}
-
-.topnav ul li a:hover::before{
+.topnav ul li a:hover::before, .bottomnav ul li a:hover::before{
     width: 95%;
 }
 
@@ -95,44 +100,15 @@ body{
     text-decoration: none;
 }
 
-/* <-------------------------------------------------------------------> */
-/* Bottom Sidebar */
 
-.bottomnav ul{
-    margin-bottom: 0;
-    padding: 0;
-    bottom: 0;
-    width: 260px;
-    position: fixed;
-    Left: 0;
-    z-index: 5;
-    border-right-style: solid;
-    border-color: lightgray;
-}
-
-.bottomnav ul li{
-    list-style: none;
-}
-
-.bottomnav ul li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: lightgray;
-    border-radius: 40px 0 0 40px;
-    z-index: -1;
-    transition: all 300ms ease-in-out;
-}
-
-.bottomnav ul li a:hover{
-    color: black;
-}
-
-.bottomnav ul li a:hover::before{
-    width: 95%;
+/* Mobile view */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
 }
 
 
@@ -141,26 +117,28 @@ body{
 
 .wrapper{
     margin-left: 260px;
-    margin-top: -70px;
+    
 }
+
 
 /* Featured List -----------------------------------------------------------------------------------------*/
 
 .wrapper .Featured{
-    min-height: 55vh;
     padding-left: 60px;
-    padding-top: 60px;
 }
 
 
 .featlist {
     margin-right: 55px;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
 .featlist .game{
     border-radius: 6px;
+    width: 23.5%; 
+    min-width: 174px;
 }
 
 .featlist .game a{
@@ -180,8 +158,8 @@ body{
 }
 
 .featlist .game a img{
-    height: 274px;
-    width: auto;    
+    height: auto;
+    width: 100%;    
     border-radius: 5px;
     border: solid, 2px, rgb(220, 220, 220);
     transition: 0.5;
@@ -195,7 +173,6 @@ body{
 
 .wrapper .Recommend{
     display: block;
-    min-height: 36vh;
     padding-left: 60px;
     padding-top: 5px;
 }
@@ -205,14 +182,20 @@ body{
 }
 
 .recclist {
-    margin-right: 55px;
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.recclist .game{
+    width: 12%; 
+    min-width: 125px;
 }
 
 .recclist .game a img{
-    height: 130px;
-    width: auto;    
+    height: auto;
+    width: 100%;    
     border-radius: 5px;
     border: solid, 2px, rgb(220, 220, 220);
     transition: 0.5;
@@ -299,22 +282,6 @@ body{
     z-index: 2;
 }
 
-.accountbtn{
-    right: 0;
-}
-
-#acc {
-    background-color: black;
-    border-radius: 5px;
-    padding: 6px 10px 5px 10px; 
-    border: none;
-}
-
-#acc a{
-    text-decoration: none;
-    color: white;
-}
-
 /* ------------------------------------------------------------------------ */
 /* Footer */
 
@@ -332,6 +299,7 @@ body{
     width:100%;
     color:gray;
     font-size:0.8em;
+    padding: 0;
 }
 
 .footer .row a{
@@ -348,5 +316,139 @@ body{
     height: 25px;
     width: auto;
     gap: 10px;
+}
+
+
+/* Mobile view */
+@media (max-width: 768px){
+
+/* Navigations-------------------------- */
+
+h2{
+    margin-top: 0;
+    padding: 0 5%; 
+}
+
+.topnav ul, .bottomnav ul {
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+}
+
+.topnav ul.show, .bottomnav ul.show {
+    transform: translateX(0);
+}
+
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+    background: #e3e9f7;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: block;
+    margin: 10px;
+}
+/* --------------------------------------------------- */
+.wrapper, .footer, .topbar{
+    margin-left: 0;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.three{
+    margin-left: 0;
+}
+
+/* Featured---------------------------------------------- */
+.wrapper .Featured{
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.featlist .game{
+    width: 45%;
+    min-width: 0;
+}
+
+.featlist {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.featlist .game a img{
+    height: auto;
+    width: 100%;    
+}
+
+/* Recommended---------------------------------------------------- */
+.wrapper .Recommend{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.wrapper .Recommend h2{
+    margin-bottom: 15px;
+}
+
+.recclist {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.recclist .game{
+    width: 20%;
+    min-width: 100px;
+}
+
+.recclist .game a img{
+    height: auto;
+    width: 100%;    
+}
+
+
+/* Footer--------------------------------------------- */
+.footer .row{
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+}
+
+@media (min-width: 769px) {
+.nav-toggle {
+    display: none;
+}
+}
+
+@media (max-width: 450px) {
+.three {
+    flex-direction: column;  
+    align-items: flex-start; 
+
+}
+
+.three a {
+    width: 100%;         
+    text-align: center;
+    padding: 3px 0px 3px 0;
+}
 }
 

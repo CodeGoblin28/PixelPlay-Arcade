@@ -9,6 +9,9 @@ body{
     background: #e3e9f7;
 }
 
+/* ----------------------------------------------------------------------- */
+/* Top Sidebar */
+
 .navbar{
     background-color: #e3e9f7;
 }
@@ -27,7 +30,7 @@ body{
 .logo img{
     position: relative;
     top: 10px;
-    padding: 0 10px 0 0;
+    padding: 0 5.5px 0 0;
     width: 40px;
     height: auto;
 }
@@ -39,21 +42,32 @@ body{
     width: auto;
 }
 
-.topnav ul{
+.topnav ul, .bottomnav ul{
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 260px;
     position: fixed;
-    top: 0;
     Left: 0;
+    z-index: 5;
     border-right-style: solid;
     border-color: lightgray;
+    background-color: #e3e9f7;
+    transform: translateX(0);
 }
 
-.topnav ul li{
+.topnav ul{
+    height: 100%;
+    top: 0;
+}
+
+.bottomnav ul{
+    bottom: 0;
+}
+
+.topnav ul li, .bottomnav ul li{
     list-style: none;
 }
+
 
 .navitem:before{
     content: '';
@@ -68,11 +82,9 @@ body{
     transition: all 300ms ease-in-out;
 }
 
-.topnav ul li a:hover{
-    color: black;
-}
 
-.topnav ul li a:hover::before{
+
+.topnav ul li a:hover::before, .bottomnav ul li a:hover::before{
     width: 95%;
 }
 
@@ -88,58 +100,28 @@ body{
     text-decoration: none;
 }
 
-/* <-------------------------------------------------------------------> */
 
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
 
-.bottomnav ul{
-    margin-bottom: 0;
-    padding: 0;
-    bottom: 0;
-    width: 260px;
-    position: fixed;
-    Left: 0;
-    border-right-style: solid;
-    border-color: lightgray;
-}
-
-.bottomnav ul li{
-    list-style: none;
-}
-
-
-.bottomnav ul li a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: lightgray;
-    border-radius: 40px 0 0 40px;
-    z-index: -1;
-    transition: all 300ms ease-in-out;
-}
-
-.bottomnav ul li a:hover{
-    color: black;
-}
-
-.bottomnav ul li a:hover::before{
-    width: 95%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
 }
 
 
 /* ------------------------------------------------------------------------------- */
-
-Main{
+.wrapper{
     margin-left: 260px;
     margin-top: 40px;
     min-height: 100vh;
 }
 
-.wrapper{
-    padding-left: 60px;
-    padding-right: 60px;
+.article-body{
+    padding: 0 60px;
 }
 
 .title h1, h2{
@@ -157,7 +139,7 @@ Main{
     border-radius: 20px;
     border-width: 1px;
     margin-bottom: 8px;
-    height: 40px;
+    min-height: 40px;
     background: rgb(228, 228, 228);
 }
 
@@ -166,11 +148,17 @@ Main{
     color: #000000;
     align-items: center;
     display: flex;
-    line-height: 40px;
+    min-height: 40px;
+    gap: 10px;
+    line-height: normal;
+
 }
 
 .articleslist ul li a img{
-    padding: 0 20px 0 10px;
+    flex-shrink: 0; 
+    height: 22px;
+    width: auto;
+    padding: 0 10px 0 10px;
 }
 
 .answers{
@@ -193,7 +181,10 @@ Main{
 /* Footer */
 
 .footer{
+    position: relative;
+    bottom: 0;
     margin-left: 260px;
+    width: calc(100% - 260px); 
     background-color: #e3e9f7;
     padding:10px 0px;
     font-family: 'Play', sans-serif;
@@ -222,4 +213,86 @@ Main{
     height: 25px;
     width: auto;
     gap: 10px;
+}
+
+@media (max-width: 768px){
+/* Navigations-------------------------- */
+h2{
+    margin-top: 0;
+    padding: 0 5%; 
+}
+
+.title h1{
+    margin-right: 60px;
+}
+
+.topnav ul, .bottomnav ul {
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+}
+
+.topnav ul.show, .bottomnav ul.show {
+    transform: translateX(0);
+}
+
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+    background: #e3e9f7;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: block;
+    margin: 10px;
+}
+
+
+/* Content left--------------------------------------------------- */
+.wrapper, .footer{
+    margin-left: 0;
+}
+
+.wrapper{
+    width: 100%;
+    justify-content: center;
+}
+
+.article-body{
+    padding: 0 30px;
+}
+
+ul{
+    padding: 0;
+}
+
+
+h2{
+    padding: 0;
+}
+
+/* Footer--------------------------------------------- */
+.footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer .row{
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+}
+}
+
+
+/* Hide Navigation Burger */
+@media (min-width: 769px) {
+.nav-toggle {
+    display: none;
+}
 }

@@ -3,11 +3,14 @@
 <head>
     <Title>PixelPlay Arcade</Title>
     <link rel="stylesheet" href="helpstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <Nav class="navbar">
+    <nav class="navbar" id="navbar">
+        <button class="nav-toggle" id="navToggle">☰</button>
+
         <div class="navdiv">
-            <div class="topnav">
+            <div class="topnav" id="topnav">
                 <ul>
                     <li class="logo"><a class="backban" href="../../index.html"><img src="../../images/icons/joystick.png" alt="">PixelPlay Arcade</a></li>
                     <li class="icon"><a class="navitem" href="../../Main/Home/Home(Recommended)/reccomended.html"><img src="../../images/icons/home.png" alt="">Home</a></li>
@@ -16,7 +19,7 @@
                 </ul>
             </div>
 
-            <div class="bottomnav">
+            <div class="bottomnav" id="bottomnav">
                 <ul>
                     <li class="icon"><a class="navitem" href="../Gallery/gallery.html"><img src="../../images/icons/gallery.png" alt="">Gallery</a></li>
                     <li class="icon"><a class="navitem" href="../Help/help.html"><img src="../../images/icons/help.png" alt="">Help</a></li>
@@ -24,10 +27,10 @@
                 </ul>
             </div>
         </div>
-    </Nav>
+    </nav>
 
-<Main>
-    <div class="wrapper">
+<div class="wrapper">
+    <div class="article-body">
         <div class="title">
             <h1>PixelPlay Arcade Help and Support</h1>
             <h2>Got a Question?</h2>
@@ -90,10 +93,19 @@
             </div>
         </div>
     </div>
-</Main>
+</div>
+
+
+
+<div id="preloader">
+    <video id="preloader-video" autoplay muted playsinline>
+        <source src="../../animation/Joyst.mp4" type="video/mp4" />
+    </video>
+</div>
+
 
 <footer>
-    <Div class="footer">
+    <div class="footer">
         <div class="row">
             <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=retamaliankirby28@gmail.com&tf=1"><img src="../../images/Footer Icons/email.png" alt=""></a>
             <a href="https://www.facebook.com/iankirby.retanal.1"><img src="../../images/Footer Icons/facebok.png" alt=""></a>
@@ -103,8 +115,27 @@
         <div class="row">
             PIXELPLAY ARCADE Copyright © 2025 - All rights reserved || Designed By: Ian Kirby Retanal || This website is part of a school project.
         </div>
-    </Div>
+    </div>
 </footer>
 
+    <script>
+    document.getElementById("navToggle").addEventListener("click", function () {
+    document.querySelector("#topnav ul").classList.toggle("show");
+    document.querySelector("#bottomnav ul").classList.toggle("show");
+    });
+    </script>
+
 </body>
+
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  document.body.style.overflow = 'hidden';
+</script>
+
+
 </html>

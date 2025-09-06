@@ -42,6 +42,8 @@ body{
     width: auto;
 }
 
+/* ---------------------------------------------------- */
+/* Improved Navigation */
 .topnav ul, .bottomnav ul{
     margin: 0;
     padding: 0;
@@ -68,6 +70,18 @@ body{
     list-style: none;
 }
 
+.navitem {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+}
+
 
 .navitem:before{
     content: '';
@@ -83,25 +97,12 @@ body{
 }
 
 
-
 .topnav ul li a:hover::before, .bottomnav ul li a:hover::before{
     width: 95%;
 }
 
-.navitem {
-    padding: 15px 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    padding: 10px 0 10px 10px;
-    color: #000000;
-    position: relative;
-    text-decoration: none;
-}
 
-
-/* Mobile toggle */
+/* Mobile view */
 .nav-toggle {
   display: none;
   font-size: 26px;
@@ -117,124 +118,111 @@ body{
 
 .wrapper{
     margin-left: 260px;
-    margin-top: -70px;
+    
 }
 
-.topsell{
+
+/* Featured List -----------------------------------------------------------------------------------------*/
+
+.wrapper .Featured{
     padding-left: 60px;
-    padding-top: 60px;
 }
 
-/* Top Section------------------------------------------------------------------- */
 
-.topsell .topsection{
+.featlist {
     margin-right: 55px;
-}
-
-.topsell .topsection h2{
-    font-size: 30px;
-}
-
-.topsell .topsection ul{
-    padding: 0;
-    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    /* flex-wrap: wrap; */
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.topsell .topsection ul li{
-    list-style: none;
-    font-weight: 550;
-    /* padding: 0 10px; */
+.featlist .game{
+    border-radius: 6px;
+    width: 23.5%; 
+    min-width: 174px;
 }
 
-.topsell .topsection ul .T{
-    flex: 1.5;
-    padding-left: 20px;
-}
-
-.topsell .topsection ul .G{
-    flex: 2;
-    min-width: 50px;
-}
-
-.topsell .topsection ul .DP {
-
-    margin-right: 60px;
-    display: flex;
-    gap: 50px;
-    flex-shrink: 0;
-}
-
-/* Top Seller Games ------------------------------------------------------------------------------ */
-
-.topsell .game{
-    margin-right: 55px;
-    border-top-style: solid;
-    border-color: rgb(211, 211, 211);
-    margin-bottom: 5px;
-}
-
-.topsell .game a{
-    display: flex;
+.featlist .game a{
     text-decoration: none;
     color: black;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding-right: 20px;
 }
 
-.topsell .game a h3{
-    margin-left: 20px;
+.featlist .game a p{
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 2px;
 }
 
-.topsell .game a img{
-    height: 100px;
-    width: 100px;
-    position: relative;
+.featlist .game a .price{
+    color: rgb(145, 145, 145);
+    font-size: 14px;
 }
 
-.topsell .game a ul{
-    margin-left: 30%;
-    position: absolute;
-}
-
-
-
-.topsell .game a ul li{
-    list-style: none;
-    display: inline-block;
-    background-color: #e3e9f7;
-    padding: 3px;
+.featlist .game a img{
+    height: auto;
+    width: 100%;    
     border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(170, 170, 170);
+    border: solid, 2px, rgb(220, 220, 220);
+    transition: 0.5;
 }
 
-.topsell .game a .pricebox {
+.featlist .game a img:hover{
+    border: solid, 2px, #aeaeae;
+}
+
+/* Recommended -----------------------------------------------------------------------------------------*/
+
+.wrapper .Recommend{
+    display: block;
+    padding-left: 60px;
+    padding-top: 5px;
+}
+
+.wrapper .Recommend h2{
+    margin-bottom: 15px;
+}
+
+.recclist {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-left: auto;
-    margin-right: 40px;
-    grid-template-columns: repeat(auto-fit);
-    min-width: 150px;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 20px;
 }
 
+.recclist .game{
+    width: 12%; 
+    min-width: 125px;
+}
 
-.topsell .game a .disc{
-    background-color: #e3e9f7;
-    padding: 3px;
+.recclist .game a img{
+    height: auto;
+    width: 100%;    
     border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(170, 170, 170);
+    border: solid, 2px, rgb(220, 220, 220);
+    transition: 0.5;
+}
+
+.recclist .game a img:hover{
+    border: solid, 2px, #aeaeae;
+}
+
+.recclist .game{
+    border-radius: 6px;
+}
+
+.recclist .game a{
+    text-decoration: none;
+    color: black;
+}
+
+.recclist .game a p{
+    margin: 0;
+    margin-top: 5px;
+}
+
+.recclist .game a .price{
+    color: rgb(145, 145, 145);
+    font-size: 14px;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -290,7 +278,7 @@ body{
     border-radius: 5px;
 }
 
-.Top {
+.Reco {
     background-color: #e3e9f7;
     z-index: 2;
 }
@@ -299,10 +287,7 @@ body{
 /* Footer */
 
 .footer{
-    position: relative;
-    bottom: 0;
     margin-left: 260px;
-    width: calc(100% - 260px); 
     background-color: #e3e9f7;
     padding:10px 0px;
     font-family: 'Play', sans-serif;
@@ -315,6 +300,7 @@ body{
     width:100%;
     color:gray;
     font-size:0.8em;
+    padding: 0;
 }
 
 .footer .row a{
@@ -334,36 +320,11 @@ body{
 }
 
 
-/* Genre Tags Responsive------------------------------------------------ */
-
-@media (max-width: 1300px){
-.topsell .topsection ul .G{
-    flex: 1;
-    min-width: 50px;
-}
-
-.topsell .game a ul{  
-    margin-left: 35%;
-    column-count: 2;
-}    
-}
-
-@media (max-width: 1170px) {
-.topsell .game a ul {
-    display: none;
-}
-
-.topsell .topsection ul .G {
-    display: none;
-}
-
-}
-
-
-
-
+/* Mobile view */
 @media (max-width: 768px){
+
 /* Navigations-------------------------- */
+
 h2{
     margin-top: 0;
     padding: 0 5%; 
@@ -393,139 +354,100 @@ h2{
     display: block;
     margin: 10px;
 }
-
-
-/* Content left--------------------------------------------------- */
+/* --------------------------------------------------- */
 .wrapper, .footer, .topbar{
     margin-left: 0;
 }
 
 .wrapper{
-    width: 97%;
-    margin-left: 1.5%;
-    justify-content: center;
+    width: 100%;
 }
-
-/* Main-------------------------------------------------------------------- */
 
 .three{
     margin-left: 0;
 }
 
-.topsell{
-    padding-left: 0;
-    padding-top: 0;
+/* Featured---------------------------------------------- */
+.wrapper .Featured{
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.featlist .game{
+    width: 45%;
+    min-width: 0;
+}
+
+.featlist {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    display: grid;
-    margin-top: 60px;
-    overflow-x: hidden;
+    justify-content: center;
 }
 
 
-/* Titles */
-.topsell .topsection h2{
-    margin-bottom: 10px;
+.featlist .game a img{
+    height: auto;
+    width: 100%;    
 }
 
-.topsell .topsection{
-    margin-right: 0;
-}
-
-.topsell .topsection ul .T{
-    margin-right: 50px;
-}
-
-
-/* Games */
-.topsell .game{
-    margin-right: 0;
-}
-
-.topsell .game a h3 {
-    margin: 0 20px;
-}
-
-.topsell .topsection ul .DP {
-    margin-right: 70px;
-    gap: 40px;
-}
-
-.topsell .game a .disc{
+/* Recommended---------------------------------------------------- */
+.wrapper .Recommend{
     padding: 0;
-    margin: 0;
-    padding: 3px;
+    margin-bottom: 30px;
 }
 
-.topsell .game a .price{
-    padding: 0;
-    margin: 0;
+.wrapper .Recommend h2{
+    margin-bottom: 15px;
 }
+
+.recclist {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.recclist .game{
+    width: 20%;
+    min-width: 100px;
+}
+
+.recclist .game a img{
+    height: auto;
+    width: 100%;    
+}
+
 
 /* Footer--------------------------------------------- */
-.footer{
-    width: 100%; 
-    position: relative;
-    bottom: 0;
-}
-
 .footer .row{
-    width: 95%;
     padding: 0;
-    margin: 0 auto;
-}
 }
 
+}
 
-/* Hide Navigation Burger */
 @media (min-width: 769px) {
 .nav-toggle {
     display: none;
 }
 }
 
-
-
-
 @media (max-width: 450px) {
-/* Home navigation bar -------------------------------------------------- */
 .three {
     flex-direction: column;  
     align-items: flex-start; 
+
 }
 
 .three a {
     width: 100%;         
     text-align: center;
     padding: 3px 0px 3px 0;
-}
-
-/* -------------------------------------------------------------------- */
-/* Stack Price */
-
-.topsell .topsection ul .DP {
-    margin-right: 20px;
-    row-gap: 0;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;  
-}
-
-.topsell .game a .disc{
-    padding: 0;
-    margin: 0;
-    width: 50px;
-    text-align: center;
-}
-
-.topsell .game a .pricebox {
-    margin-right: 0;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;  
-    row-gap: 10px;
-    min-width: 50px;
 }
 }
 
